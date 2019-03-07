@@ -3,7 +3,7 @@ from classes.Crawler import Crawler
 import time
 
 
-_URL = "http://www.centaline-macao.com/Project/Searchs/x1?PageIndex="
+_URL = "..."
 _data = []
 
 f = open("dataset_01.txt", "w")
