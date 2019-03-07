@@ -25,7 +25,6 @@ def feature_process(data, scale=1.0):
 
 
 data = import_data("dataset/dataset_01.txt")
-print(data[:, 0].shape, data[0, 0])
 max_x = np.max(data[:, 0])
 X = feature_process(data[:, 0], max_x)
 y = data[:, 1]
@@ -41,7 +40,7 @@ X_lin2 = np.array(X_lin, dtype=np.float64).reshape(-1, 1)
 X_test = feature_process(X_lin, max_x)
 y_test = model.predict(X_test)
 
-plt.title("Housing Price & Size Relationship")
+plt.title("Macao Housing Price & Size Relationship")
 plt.xlabel("Square feet")
 plt.ylabel("Price HKD 10K")
 plt.scatter(data[:, 0], y, 5, color="blue", marker="o")
