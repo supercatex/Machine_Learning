@@ -24,7 +24,7 @@ def feature_process(data, scale=1.0):
     return feature
 
 
-data = import_data("dataset/dataset_01.txt")
+data = import_data("dataset/dataset_03.txt")
 max_x = np.max(data[:, 0])
 X = feature_process(data[:, 0], max_x)
 y = data[:, 1]
