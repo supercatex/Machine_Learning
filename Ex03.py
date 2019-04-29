@@ -34,10 +34,6 @@ model.add(layers.Dense(
     units=128,
     activation=activations.relu
 ))
-model.add(layers.Dense(
-    units=256,
-    activation=activations.relu
-))
 model.add(layers.Dense(10, activation="softmax"))
 model.compile(optimizer=optimizers.Adam(), loss=losses.categorical_crossentropy)
 
@@ -45,12 +41,7 @@ X_train = X_train.reshape(len(X_train), 28*28)
 X_train = X_train.astype('float32')
 X_train /= 255
 Y_train = np_utils.to_categorical(y_train, 10)
-model.fit(X_train, Y_train)
-
-X_test = X_test.reshape(len(X_test), 28*28)
-X_test = X_test.astype('float32')
-X_test /= 255
-
+model.fit(X_train, Y_train, epochs=1, batch_size=32)
 
 is_drawing = False
 def onmouse_image(event, x, y, flags, param):
