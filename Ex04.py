@@ -1,13 +1,11 @@
 import cv2 as cv
 import random
-import json
 import numpy as np
 from keras.models import Sequential
 from keras import layers
 from keras import activations
 from keras import optimizers
 from keras import losses
-from keras import metrics
 from keras.utils import np_utils
 from keras.datasets import mnist
 import os
