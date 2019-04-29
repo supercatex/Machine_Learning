@@ -34,7 +34,7 @@ model.summary()
 X = np.array([[1], [2], [3], [4], [5], [6], [7], [8], [9]])
 y = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-earlyStopping = EarlyStopping(monitor='loss', min_delta=1e-10, patience=1, verbose=1, mode='auto')
+earlyStopping = EarlyStopping(monitor='loss', min_delta=1e-10, patience=5, verbose=1, mode='auto')
 history = model.fit(
     X, y,
     epochs=1000,
