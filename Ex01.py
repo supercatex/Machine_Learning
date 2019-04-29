@@ -33,7 +33,7 @@ model = LinearRegression()
 model.fit(X, y)
 
 print(model.score(X, y))
-print(model.predict(feature_process([10000], max_x)))
+print(model.predict(feature_process([1000], max_x)))
 
 X_lin = np.linspace(0, max(data[:, 0]) * 1.1, 1000)
 X_lin2 = np.array(X_lin, dtype=np.float64).reshape(-1, 1)
