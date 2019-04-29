@@ -98,6 +98,7 @@ while True:
         tmp = tmp.reshape(1, 28, 28, 1)
         tmp = tmp.astype('float32')
         tmp /= 255
+
         predict = model.predict(tmp)
         print(predict, np.argmax(predict))
 
