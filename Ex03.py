@@ -29,7 +29,7 @@ while True:
 cv.destroyAllWindows()
 
 model = Sequential()
-model.add(layers.Conv2D(
+model.add(layers.Dense(
     input_shape=(28*28),
     units=128,
     activation=activations.relu

@@ -24,7 +24,7 @@ model.add(input_layer)
 
 # Compile
 model.compile(
-    optimizer=optimizers.Adam(),
+    optimizer=optimizers.SGD,
     loss=losses.mean_squared_error,
     metrics=[metrics.mean_squared_error]
 )
@@ -47,7 +47,7 @@ print("Layer 1 weight thetas: ", input_layer.get_weights()[0])
 print("Layer 1 weight biases: ", input_layer.get_weights()[1])
 print("y = %f * x + %f" % (input_layer.get_weights()[0][0][0], input_layer.get_weights()[1][0]))
 
-print("Predicts: ", model.predict(np.array([[1000]])))
+print("Predicts: ", model.predict(np.array([[10]])))
 
 plt.plot(history.history['loss'])
 plt.plot(history.history['mean_squared_error'])
